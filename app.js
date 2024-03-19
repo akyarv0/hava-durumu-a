@@ -49,10 +49,13 @@ const getCity = async (cityName) => {
 };
 
 const displayWeatherInfo = (cityName, data) => {
-  const { main, weather, wind } = data;
+  const { main ,weather, wind } = data;
   const { temp, feels_like } = main;
   const { description } = weather[0];
   const { speed } = wind;
+  
+ 
+ 
 
   const weatherInfo = `
     <h2>Weather Information for ${cityName.toUpperCase()}</h2>
@@ -60,6 +63,9 @@ const displayWeatherInfo = (cityName, data) => {
     <p>Feels like: ${feels_like}°C</p>
     <p>Description: ${description}</p>
     <p>Wind speed: ${speed} m/s</p>
+ 
+    
+
   `;
 
   const infoElement = document.querySelector(".info");
