@@ -53,7 +53,8 @@ const displayWeatherInfo = (cityName, data) => {
   const { temp, feels_like } = main;
   const { description } = weather[0];
   const { speed } = wind;
-  
+  const rain = data.rain ? data.rain["1h"] : 0; // Check if rain data is available
+
  
  
 
@@ -63,6 +64,7 @@ const displayWeatherInfo = (cityName, data) => {
     <p>Feels like: ${feels_like}°C</p>
     <p>Description: ${description}</p>
     <p>Wind speed: ${speed} m/s</p>
+    <p>Rain: ${rain} mm</p>
  
     
 
