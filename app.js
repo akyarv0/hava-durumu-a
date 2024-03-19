@@ -66,8 +66,6 @@ const displayWeatherInfo = (cityName, data) => {
     <p>Wind speed: ${speed} m/s</p>
     <p>Rain: ${rain} mm</p>
  
-    
-
   `;
 
   const infoElement = document.querySelector(".info");
